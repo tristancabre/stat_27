@@ -14,3 +14,17 @@ install.packages("factoextra")  # pour les graphiques
 library(FactoMineR)
 library(factoextra)
 ```
+
+```{r}
+summary(pisa3$READ)
+
+summary(pisa3$MATH) 
+```
+
+```{r}
+hist(pisa3$READ)
+```
+
+```{r}
+hist(pisa3$MATH)
+```
