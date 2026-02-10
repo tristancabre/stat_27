@@ -167,6 +167,56 @@ pisa3 <- pisa3 %>%
 
 ```
 
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MPIN = (PV1MPIN + PV2MPIN + PV3MPIN + PV4MPIN + PV5MPIN +
+            PV6MPIN + PV7MPIN + PV8MPIN + PV9MPIN + PV10MPIN) / 10
+  )
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MPIN, -PV2MPIN, -PV3MPIN, -PV4MPIN, -PV5MPIN,
+         -PV6MPIN, -PV7MPIN, -PV8MPIN, -PV9MPIN, -PV10MPIN)
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MPRE = (PV1MPRE + PV2MPRE + PV3MPRE + PV4MPRE + PV5MPRE +
+            PV6MPRE + PV7MPRE + PV8MPRE + PV9MPRE + PV10MPRE) / 10
+  )
+pisa3 <- pisa3 %>%
+  select(-PV1MPRE, -PV2MPRE, -PV3MPRE, -PV4MPRE, -PV5MPRE,
+         -PV6MPRE, -PV7MPRE, -PV8MPRE, -PV9MPRE, -PV10MPRE)
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MCCR = (PV1MCCR + PV2MCCR + PV3MCCR + PV4MCCR + PV5MCCR +
+            PV6MCCR + PV7MCCR + PV8MCCR + PV9MCCR + PV10MCCR) / 10
+  )
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MCCR, -PV2MCCR, -PV3MCCR, -PV4MCCR, -PV5MCCR,
+         -PV6MCCR, -PV7MCCR, -PV8MCCR, -PV9MCCR, -PV10MCCR)
+
+```
+
+## Nouveau fichier
+
+```{r}
+
+saveRDS(pisa3, file = "pisa3.rds")
+
+```
+
 # Analyses bivariées
 
 ## Packages nécéssaires
