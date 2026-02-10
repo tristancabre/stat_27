@@ -28,3 +28,41 @@ hist(pisa3$READ)
 ```{r}
 hist(pisa3$MATH)
 ```
+
+```{r}
+data <- 
+res.pca <- PCA(data, scale.unit = TRUE, graph = FALSE)
+```
+
+```{r}
+cor(x = pisa3$READ, y = pisa3$MATH, method = "pearson")
+```
+
+```{r}
+aov <- aov(pisa3$ST315Q07JA ~ pisa3$MATH, data = pisa3)
+```
+
+```{r}
+aov <- summary(aov)
+```
+
+```{r}
+z <- aov[[1]][["Sum Sq"]][1]
+zz <- aov[[1]][["Sum Sq"]][2]
+```
+
+```{r}
+z / (z +zz)
+```
+
+```{r}
+boxplot(pisa3$MATH ~ pisa3$ST315Q07JA, col="lightblue")
+```
+
+```{r}
+cor(pisa3$MATH, pisa3$ST315Q07JA)
+```
+
+```{r}
+boxplot(pisa3$READ ~ pisa3$ST315Q07JA, col="lightblue")
+```
