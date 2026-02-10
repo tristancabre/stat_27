@@ -66,3 +66,12 @@ cor(pisa3$MATH, pisa3$ST315Q07JA)
 ```{r}
 boxplot(pisa3$READ ~ pisa3$ST315Q07JA, col="lightblue")
 ```
+
+```{r}
+library(ggplot2)
+vioplot(pisa3$READ ~ pisa3$ST315Q07JA, col="lightblue")
+```
+
+```{r}
+hist(pisa3$SCIE)
+```
