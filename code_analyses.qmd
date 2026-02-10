@@ -1,0 +1,16 @@
+---
+title: "analyses bivariées"
+format: html
+editor: visual
+---
+
+# Analyses bivariées
+
+## Packages nécéssaires
+
+```{r}
+install.packages("FactoMineR")
+install.packages("factoextra")  # pour les graphiques
+library(FactoMineR)
+library(factoextra)
+```

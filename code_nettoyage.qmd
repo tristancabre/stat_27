@@ -216,14 +216,3 @@ pisa3 <- pisa3 %>%
 saveRDS(pisa3, file = "pisa3.rds")
 
 ```
-
-# Analyses bivariées
-
-## Packages nécéssaires
-
-```{r}
-install.packages("FactoMineR")
-install.packages("factoextra")  # pour les graphiques
-library(FactoMineR)
-library(factoextra)
-```
