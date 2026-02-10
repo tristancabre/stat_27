@@ -87,6 +87,86 @@ pisa3 <- pisa3 %>%
 summary(pisa3$READ)
 ```
 
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MCQN = (PV1MCQN + PV2MCQN + PV3MCQN + PV4MCQN + PV5MCQN +
+            PV6MCQN + PV7MCQN + PV8MCQN + PV9MCQN + PV10MCQN) / 10
+  )
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MCQN, -PV2MCQN, -PV3MCQN, -PV4MCQN, -PV5MCQN,
+         -PV6MCQN, -PV7MCQN, -PV8MCQN, -PV9MCQN, -PV10MCQN)
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MCSS = (PV1MCSS + PV2MCSS + PV3MCSS + PV4MCSS + PV5MCSS +
+            PV6MCSS + PV7MCSS + PV8MCSS + PV9MCSS + PV10MCSS) / 10
+  )
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MCSS, -PV2MCSS, -PV3MCSS, -PV4MCSS, -PV5MCSS,
+         -PV6MCSS, -PV7MCSS, -PV8MCSS, -PV9MCSS, -PV10MCSS)
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MCUD = (PV1MCUD + PV2MCUD + PV3MCUD + PV4MCUD + PV5MCUD +
+            PV6MCUD + PV7MCUD + PV8MCUD + PV9MCUD + PV10MCUD) / 10
+  )
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MCUD, -PV2MCUD, -PV3MCUD, -PV4MCUD, -PV5MCUD,
+         -PV6MCUD, -PV7MCUD, -PV8MCUD, -PV9MCUD, -PV10MCUD)
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MPEM = (PV1MPEM + PV2MPEM + PV3MPEM + PV4MPEM + PV5MPEM +
+            PV6MPEM + PV7MPEM + PV8MPEM + PV9MPEM + PV10MPEM) / 10
+  )
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MPEM, -PV2MPEM, -PV3MPEM, -PV4MPEM, -PV5MPEM,
+         -PV6MPEM, -PV7MPEM, -PV8MPEM, -PV9MPEM, -PV10MPEM)
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  mutate(
+    MPFS = (PV1MPFS + PV2MPFS + PV3MPFS + PV4MPFS + PV5MPFS +
+            PV6MPFS + PV7MPFS + PV8MPFS + PV9MPFS + PV10MPFS) / 10
+  )
+
+```
+
+```{r}
+pisa3 <- pisa3 %>%
+  select(-PV1MPFS, -PV2MPFS, -PV3MPFS, -PV4MPFS, -PV5MPFS,
+         -PV6MPFS, -PV7MPFS, -PV8MPFS, -PV9MPFS, -PV10MPFS)
+
+```
+
 # Analyses bivariées
 
 ## Packages nécéssaires
